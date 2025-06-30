@@ -18,7 +18,7 @@ _Utilise la bannière ```standard.txt``` située dans le dossier ```banners/```_
 <br>
 Exemple :<br>
 **Hello** devient :<br>
-```
+
  _              _   _          
 | |            | | | |         
 | |__     ___  | | | |   ___   
@@ -26,8 +26,6 @@ Exemple :<br>
 | | | | |  __/ | | | | | (_) | 
 |_| |_|  \___| |_| |_|  \___/  
                                
-
-```
 
 ## 📦 Extensions / Sous-dossiers
 - **[ascii-art/fs](./ascii-art/fs/main.go)**
