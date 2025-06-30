@@ -13,19 +13,7 @@ Le projet s'articule autour de différentes variantes, allant d'une version simp
 
 - **[ascii-art/main.go](./ascii-art/main.go)**<br>
 Version de base : prend une chaîne en argument et l'affiche en ASCII dans le terminal.<br>
-_Utilise la bannière ```standard.txt``` située dans le dossier ```banners/```_
-<br>
-<br>
-Exemple :<br>
-**Hello** devient :<br>
-
- _              _   _          
-| |            | | | |         
-| |__     ___  | | | |   ___   
-|  _ \   / _ \ | | | |  / _ \  
-| | | | |  __/ | | | | | (_) | 
-|_| |_|  \___| |_| |_|  \___/  
-                               
+_Utilise la bannière ```standard.txt``` située dans le dossier ```banners/```_<br>
 
 ## 📦 Extensions / Sous-dossiers
 - **[ascii-art/fs](./ascii-art/fs/main.go)**
