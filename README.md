@@ -16,7 +16,7 @@ Version de base : prend une chaîne en argument et l'affiche en ASCII dans le te
 _Utilise la bannière ```standard.txt``` située dans le dossier ```banners/```_<br>
 
 ## 📦 Extensions / Sous-dossiers
-- **[ascii-art/fs](./ascii-art/fs/main.go)**
+- **[fs](./ascii-art/fs/main.go)**
 Ajoute la possibilité de choisir la bannière utilisée pour la conversion ASCII.
 
     📚 Bannières disponibles dans le dossier ```banners/```:<br>
@@ -25,10 +25,10 @@ Ajoute la possibilité de choisir la bannière utilisée pour la conversion ASCI
     - ```thinkertoy.txt```<br>
     - ```flame.txt``` (_créée manuellement_)<br>
 
-- **[ascii-art/justify](./ascii-art/justify/main.go)**
+- **[justify](./ascii-art/justify/main.go)**
 A le même fonctionnement que [fs](./ascii-art/fs/main.go), avec un troisième argument pour gérer l'alignement du texte : ```left```, ```right```, ```center```, ou ```justify```.
 
-- **[ascii-art/output](./ascii-art/output/main.go)**
+- **[output](./ascii-art/output/main.go)**
 A également le même fonctionnement que [fs](./ascii-art/fs/main.go), avec une extension permettant d'enregistrer le résultat dans un fichier texte.
 
 ## 🚀 Utilisation
