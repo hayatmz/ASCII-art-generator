@@ -1,0 +1,94 @@
+_____________MANIPULATION Images Docker avec Dockerfile
+
+# docker image ls || docker images
+    Répertorier les images Docker téléchargées.
+
+# docker rmi <IMAGE_ID> || docker rmi <NOM_IMAGE>
+    Supprimer une image Docker.
+    # docker rmi -f ID_ou_NOM
+    Forcer la suppression.
+# docker rmi -f $(docker images -q)
+    Supprimer toutes les images disponibles.
+
+# docker search <NOM_IMAGE>
+    Lister les images dispo dans DockerHub.
+    # docker search --filter "is-official=true" <TAG>
+    N'afficher que les images officielles.
+
+# docker pull <TAG>:latest
+    Télécharger une image depuis DockerHub.
+
+_____________MANIPULATION Conteneurs Docker
+
+# docker run [OPTIONS] <IMAGE_NAME ou ID>
+    Créer une instance de notre image = un conteneur.
+    # docker run -ti ubuntu:latest
+    -t pour allouer un pseudo TTY (terminal virtuel)
+    -i pour garder un STDIN ouvert (l'entrée standard plus précisément l'entrée clavier).
+    
+# docker run --name monServeurWeb -p 8080:80 httpd:latest
+    Stocker les données d'un conteneur.
+    --name : Attribuer un nom au conteneur.
+    --expose: Exposer un port ou une plage de ports.
+    -p ou --publish: Mapper un port déjà exposé, faire une redirection de port.
+
+# docker container ls || docker ps
+    Obtenir ID pour supprimer.
+
+# docker rm <CONTAINER NAME ou ID>
+    Supprimer conteneur.
+# docker rm -f $(docker ps -aq)
+    Supprimer tous les conteneurs Docker.
+
+# docker exec
+    Lancer n'importe quelle commande dans un conteneur en cours d'éxecution.
+    # docker exec -ti monServeurWeb /bin/bash
+    Pour récupérer notre interpréteur de commande /bin/bash pour se connecter directement au conteneur.
+
+# docker logs monServeurWeb
+    -f : suivre en permanence les logs du conteneur
+    -t : afficher la date et l'heure de réception des logs.
+    # docker logs -ft monServeurWeb
+    (Ctrl + C pour quitter)
+
+# docker commit <CONTAINER NAME or ID> <NEW IMAGENAME>
+    Créer une image depuis conteneur.
+    (#docker images pour voir la nouvelle image)
+
+# cat test.txt
+    Vérifie si les données ont bien été stockées dans ce nouveau conteneur.
+
+# git --version
+    Afficher version du git.
+
+_____________CREATION propres images Docker avec Dockerfile
+(une image est un modèle composé de plusieurs couches, ces couches contiennent notre application ainsi que les fichiers binaires et les bibliothèques requises.)
+
+FROM : Définit l'image de base qui sera utilisée par les instructions suivantes.
+
+LABEL : Ajoute des métadonnées à l'image avec un système de clés-valeurs, permet par exemple d'indiquer à l'utilisateur l'auteur du Dockerfile.
+
+ARG : Variables temporaires qu'on peut utiliser dans un Dockerfile.
+
+ENV : Variables d'environnements utilisables dans votre Dockerfile et conteneur.
+
+RUN : Exécute des commandes Linux ou Windows lors de la création de l'image.
+Chaque instruction RUN va créer une couche en cache qui sera réutilisée dans le cas de modification ultérieure du Dockerfile.
+
+COPY : Permet de copier des fichiers depuis notre machine locale vers le conteneur Docker.
+
+ADD : Même chose que COPY mais prend en charge des liens ou des archives (si le format est reconnu, alors il sera décompressé à la volée).
+
+ENTRYPOINT : comme son nom l'indique, c'est le point d'entrée de votre conteneur, en d'autres termes, c'est la commande qui sera toujours exécutée au démarrage du conteneur.
+Il prend la forme de tableau JSON (ex : CMD ["cmd1","cmd1"]) ou de texte.
+
+CMD : Spécifie les arguments qui seront envoyés au ENTRYPOINT, (on peut aussi l'utiliser pour lancer des commandes par défaut lors du démarrage d'un conteneur).
+Si il est utilisé pour fournir des arguments par défaut pour l'instruction ENTRYPOINT, alors les instructions CMD et ENTRYPOINT doivent être spécifiées au format de tableau JSON.
+
+WORKDIR : Définit le répertoire de travail qui sera utilisé pour le lancement des commandes CMD et/ou ENTRYPOINT et ça sera aussi le dossier courant lors du démarrage du conteneur.
+
+EXPOSE : Expose un port.
+
+VOLUMES : Crée un point de montage qui permettra de persister les données.
+
+USER : Désigne quel est l'utilisateur qui lancera les prochaines instructions RUN, CMD ou ENTRYPOINT (par défaut c'est l'utilisateur root).

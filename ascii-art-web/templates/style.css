@@ -1,0 +1,151 @@
+header.page {
+    color: rgba(245, 245, 219, 0.9);
+    font-weight: lighter;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 40px;
+}
+
+textarea#idx {
+    background-color: rgba(245, 245, 219, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(245, 245, 219);
+    resize: none;
+    outline: none;
+    overflow: auto;
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px;
+    padding-top: 25px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 1%;
+    height: 80px;
+    text-indent: 25px;
+}
+
+textarea#res {
+  background-color: rgba(245, 245, 219, 0.1);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  outline: none;
+  overflow: hidden;
+  border-radius: 50px;
+  padding: 5%;
+  max-width: 90%;
+}
+
+main#index, main#ascii {
+    padding-top: 10%;
+
+}
+
+main.error {
+    padding-top: 6%;
+}
+
+h1.error {
+    color: rgba(245, 245, 219, 0.8);
+    font: normal small-caps normal 170px normal Georgia;
+    margin-bottom: 1px;
+}
+
+h1.method {
+    color: rgba(245, 245, 219, 0.8);font:
+    normal small-caps normal 45px normal Georgia;
+}
+
+div.retour {
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+a {
+    color: rgba(245, 245, 219, 0.7);
+}
+
+a:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+input[type="radio"] {
+    display: none;
+    color:rgb(245, 245, 219);
+}
+
+input[type="radio"] + label {
+    padding: 0.3rem 0.4rem;
+    border: 1px solid rgb(245, 245, 219);
+    color:rgb(245, 245, 219);
+    margin: 8px;
+}
+
+input[type="radio"]:hover + label {
+    padding: 0.3rem 0.4rem;
+    border: 2px solid #ccc;
+    color:rgb(245, 245, 219);
+}
+
+input[type="radio"]:checked + label {
+    border: 2px dotted rgb(245, 245, 219)
+}
+
+body {width: 100%; height: 100vh;}
+
+body#index, body#ascii, body#method, body#qcq, body#qc { width: 1000px; margin: auto; text-align: center; line-height: 50px;}
+
+body#index {background-image: url(images/index.jpg); background-repeat: no-repeat; background-size: cover;}
+
+body#ascii {background-image: url(images/ascii.jpg); background-repeat: no-repeat; background-size: cover;}
+
+body#method {background-image: url(images/method.jpg); background-repeat: no-repeat; background-size: cover;}
+
+body#qcq {background-image: url(images/404.jpg); background-repeat: no-repeat; background-size: cover;}
+
+body#qc {background-image: url(images/400.jpg); background-repeat: no-repeat; background-size: cover;}
+
+button {
+    margin-top: 3%;
+    position: relative;
+    padding: 15px 33px;
+    background: rgb(245, 245, 219);
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: rgba(18, 33, 61, 0.8);
+    box-shadow: 0px 0px 10px 0px rgb(245, 245, 219);
+    border-radius: 100px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .star-1 {position: absolute; top: 20%; left : 20%; width: 25px; height: auto; filter: drop-shadow(0 0 0 rgb(245, 245, 219)); z-index: -5; transition: all 0.8s cubic-bezier(0.05, 0.83, 0.43, 0.96);}
+  
+  .star-2 {position: absolute; top: 45%; left: 45%; width: 15px; height: auto; filter: drop-shadow(0 0 0 rgb(245, 245, 219)); z-index: -5; transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);}
+  
+  .star-3 {position: absolute; top: 40%; left: 40%; width: 5px; height: auto; filter: drop-shadow(0 0 0 rgb(245, 245, 219)); z-index: -5; transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);}
+  
+  .star-4 {position: absolute; top: 20%; left: 40%; width: 8px; height: auto; filter: drop-shadow(0 0 0 rgb(245, 245, 219)); z-index: -5; transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);}
+  
+  .star-5 {position: absolute; top: 25%; left: 45%; width: 15px; height: auto; filter: drop-shadow(0 0 0 rgb(245, 245, 219)); z-index: -5; transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);}
+  
+  .star-6 {position: absolute; top: 5%; left: 50%; width: 5px; height: auto; filter: drop-shadow(0 0 0 rgb(245, 245, 219)); z-index: -5; transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);}
+  
+  button:hover {background: rgba(18, 33, 61, 0);color: rgb(245, 245, 219);box-shadow: 0 0 80px #ffffff8c;}
+  
+  button:hover .star-1 {position: absolute; top: -20%; left: -20%; width: 20px; height: auto; filter: drop-shadow(0 0 10px rgb(245, 245, 219)); z-index: 2;}
+  
+  button:hover .star-2 {position: absolute; top: 35%; left: -25%; width: 15px; height: auto; filter: drop-shadow(0 0 10px rgb(245, 245, 219)); z-index: 2;}
+  
+  button:hover .star-3 {position: absolute; top: 80%; left: -10%; width: 10px; height: auto; filter: drop-shadow(0 0 10px rgb(245, 245, 219)); z-index: 2;}
+  
+  button:hover .star-4 {position: absolute; top: -25%; left: 105%; width: 20px; height: auto; filter: drop-shadow(0 0 10px rgb(245, 245, 219)); z-index: 2;}
+  
+  button:hover .star-5 {position: absolute; top: 30%; left: 115%; width: 15px; height: auto; filter: drop-shadow(0 0 10px rgb(245, 245, 219)); z-index: 2;}
+  
+  button:hover .star-6 {position: absolute; top: 80%; left: 105%; width: 10px; height: auto; filter: drop-shadow(0 0 10px rgb(245, 245, 219)); z-index: 2;}
+  
+  .fil0 {fill: rgb(245, 245, 219);}

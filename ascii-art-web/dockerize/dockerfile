@@ -1,0 +1,10 @@
+# Utilisez l'image officielle Golang comme image de base, dernière version
+FROM golang:latest
+# Définit le répertoire de travail dans le conteneur
+WORKDIR /app
+# Copie le contenu local dans le conteneur
+COPY . .
+# Construit l'application Go
+RUN go build -o main .
+# Commande par défaut pour exécuter l'application lorsque le conteneur démarre
+CMD ["./main"]
