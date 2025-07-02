@@ -43,6 +43,7 @@ Si ce n'est pas le cas, [installe Golang](https://go.dev/doc/install).
 ```
 git clone https://github.com/hayatmz/ASCII-art-generator
 cd ASCII-art-generator
+cd ascii-art
 ```
 
 3. **Lance le programme :**
