@@ -48,10 +48,16 @@ cd ASCII-art-generator
 cd ascii-art-web
 ```
 
-3. **Lance le serveur :**
+3. **Initialise le module Go :**<br>
+```
+go mod init ascii-art-web
+go mod tidy
+```
+
+4. **Lance le serveur :**
 ```
 go run .
 ```
 
-4. **Accède à l'interface web :**
-[http://localhost:8080](http://localhost:8080)
+5. **Accède à l'interface web :**
+[http://localhost:4444](http://localhost:4444)
