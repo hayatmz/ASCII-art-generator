@@ -1,5 +1,5 @@
-# ASCII-art-generator
-ASCII-art-generator est une collection de programmes écrits en Go qui transforment du texte standard en représentation graphique stylisée utilisant des caractères ASCII.<br>
+# ASCII-art
+ASCII-art est une collection de programmes écrits en Go qui transforment du texte standard en représentation graphique stylisée utilisant des caractères ASCII.<br>
 Le projet s'articule autour de différentes variantes, allant d'une version simple en ligne de commande à des extensions plus avancées (choix de police, aligenement, export dans un fichier...).
 >Deuxième projet crée en Décembre 2023 au sein de la formation de [Zone01](https://campus-saint-marc.com/zone-01/).
 
